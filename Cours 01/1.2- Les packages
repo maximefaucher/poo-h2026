@@ -1,0 +1,140 @@
+# Les packages en Java
+
+## 1. Définition
+
+En Java, un **package** est un conteneur logique qui permet de **regrouper des classes et des interfaces** ayant un lien fonctionnel. Il sert principalement à organiser le code, à contrôler la visibilité des classes et à éviter les conflits de noms.
+
+On peut comparer un package à un **dossier** dans un système de fichiers.
+
+---
+
+## 2. À quoi servent les packages ?
+
+### 2.1 Organisation du code
+
+Les packages facilitent la lecture, la maintenance et l’évolution d’un projet en regroupant les classes par fonctionnalité.
+
+```java
+package com.monapplication.util;
+```
+
+---
+
+### 2.2 Éviter les conflits de noms
+
+Deux classes peuvent avoir le même nom si elles se trouvent dans des packages différents.
+
+Exemple :
+
+* `java.util.Date`
+* `java.sql.Date`
+
+---
+
+### 2.3 Gestion de la visibilité
+
+Les packages influencent les niveaux d’accès :
+
+* **par défaut (package-private)** : accessible uniquement dans le même package
+* `protected` : accessible dans le même package et par héritage
+
+Les packages permettent donc de **cacher l’implémentation interne** d’un module.
+
+---
+
+### 2.4 Réutilisation du code
+
+Les packages sont la base de la réutilisation du code :
+
+* bibliothèques Java
+* frameworks
+* projets partagés
+
+---
+
+## 3. Déclaration d’un package
+
+La déclaration d’un package doit être placée **en première ligne** du fichier Java.
+
+```java
+package ca.qc.ecole.projet.modele;
+```
+
+
+---
+
+## 4. Importation de classes
+
+Importer une classe précise :
+
+```java
+import ca.qc.ecole.projet.modele.Client;
+```
+
+Importer toutes les classes d’un package :
+
+```java
+import ca.qc.ecole.projet.modele.*;
+```
+
+---
+
+## 5. Structure des dossiers
+
+Exemple de correspondance package ↔ dossiers :
+
+```text
+src/
+ └─ ca/
+    └─ qc/
+       └─ ecole/
+          └─ projet/
+             └─ modele/
+                ├─ Client.java
+                └─ Commande.java
+```
+
+---
+
+## 6. Types de packages
+
+### 6.1 Packages standards Java
+
+Quelques exemples courants :
+
+* `java.lang` (importé automatiquement)
+* `java.util`
+* `java.io`
+* `java.time`
+
+---
+
+### 6.2 Packages personnalisés
+
+Créés par les développeurs pour structurer leurs applications.
+
+```java
+package com.exemple.application;
+```
+
+---
+
+## 7. Bonnes pratiques
+
+* Utiliser des noms de packages en **minuscules**
+* Donner une responsabilité claire à chaque package
+* Éviter les packages trop volumineux
+* Limiter l’utilisation de l’import `*`
+
+---
+
+## 8. Résumé
+
+Un **package Java** permet de :
+
+* organiser le code
+* éviter les conflits de noms
+* contrôler la visibilité
+* faciliter la réutilisation du code
+
+Les packages sont essentiels pour développer des applications Java claires, maintenables et évolutives.
