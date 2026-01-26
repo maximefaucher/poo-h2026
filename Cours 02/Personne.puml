@@ -1,0 +1,12 @@
+@startuml Classe Personne
+title Classe Java simple
+
+class Personne {
+  - nom : String
+  - age  : int
+  + Personne(name : String, age : int)
+  + getNom() : String
+  + getAge() : int
+  + setAge(age : int) : void
+}
+@enduml
