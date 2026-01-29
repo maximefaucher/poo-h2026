@@ -123,3 +123,43 @@ Une méthode `void toString()` doit afficher :
 - Logique de validation dans la méthode `main`
 
 ---
+
+## Exemple d'instanciation:
+```java 
+public class Main {
+    public static void main(String[] args) {
+        // Création d'un objet Tracteur
+        Tracteur monTracteur = new Tracteur();
+
+        try {
+            // Démarrage du moteur
+            monTracteur.demarrer();
+
+            // Simulation de travail
+            System.out.println("Tracteur en fonctionnement...");
+
+            // Arrêt du moteur
+            monTracteur.arreter();
+
+            // Affichage de l'horamètre
+            System.out.println("Heures travaillées : " + monTracteur.getHorametreHeures());
+            System.out.println("Jours travaillés : " + monTracteur.getHorametreJours());
+            System.out.println("Années travaillées : " + monTracteur.getHorametreAnnees());
+        } catch (IllegalStateException e) {
+            System.out.println("Erreur : " + e.getMessage());
+        }
+    }
+}
+
+```
+
+## Résultat attendu
+```nginx
+Moteur démarré.
+Tracteur en fonctionnement...
+Moteur arrêté.
+Heures travaillées : 1
+Jours travaillés : 0
+Années travaillées : 0
+
+```
